@@ -40,11 +40,11 @@
   </entry>
   
   <entry>
-    <title>Python</title>
+    <title>Python-1</title>
     <link href="http://example.com/2021/04/24/01-python/"/>
     <id>http://example.com/2021/04/24/01-python/</id>
     <published>2021-04-24T08:30:52.000Z</published>
-    <updated>2021-04-29T03:48:47.849Z</updated>
+    <updated>2021-04-29T04:06:38.213Z</updated>
     
     <content type="html"><![CDATA[<h2 id="先了解python"><a href="#先了解python" class="headerlink" title="先了解python"></a>先了解python</h2><h3 id="1、python是一种解释性语言"><a href="#1、python是一种解释性语言" class="headerlink" title="1、python是一种解释性语言"></a>1、python是一种解释性语言</h3><p>python也是需要编译的，只不过Python不像java那样需要去强编译「手动编译」，Python在执行时是自动完成编译。</p><p>编译的结果是保存于在位于内存中的<strong>PyCodeObject</strong>中，然后通过解释器将PyCodeObject写回到<strong>pyc</strong>文件中。</p><p>当Python程序第二次运行时，首先会在硬盘中找pyc文件，如果找到直接载入，没有就执行正常过程。</p><blockquote><p>编译型语言C语言，就需要一个编译的过程，把程序转成机器语言。</p></blockquote><span id="more"></span><h3 id="2、pyc文件生成的位置"><a href="#2、pyc文件生成的位置" class="headerlink" title="2、pyc文件生成的位置"></a>2、pyc文件生成的位置</h3><p>会在生成在执行文件的同级，生成在默认的目 <code>__pycache__</code>下面，如果<code>import</code>的文件的名字为<code>example</code>，生成的名字格式大概为<code>example-cpython-39.pyc</code>。</p><h3 id="3、pyc文件有效性"><a href="#3、pyc文件有效性" class="headerlink" title="3、pyc文件有效性"></a>3、pyc文件有效性</h3><p>python每次载入pyc文件之前会检查下py文件和pyc文件的最后修改日期，如果日期不一致会重新生成一份pyc文件</p><h2 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h2><h3 id="1、优点"><a href="#1、优点" class="headerlink" title="1、优点"></a>1、优点</h3><p>1、python有许多完善的基础代码库，开发时实用很方便</p><h3 id="2、缺点"><a href="#2、缺点" class="headerlink" title="2、缺点"></a>2、缺点</h3><p>1、代码不能加密，因为Python是解释性语言，源代码是以明文形式存放，如果项目有对代码加密的需求，不要用Python来实现</p><h4 id=""><a href="#" class="headerlink" title=""></a><!--深入的遇到再补充--></h4>]]></content>
     
