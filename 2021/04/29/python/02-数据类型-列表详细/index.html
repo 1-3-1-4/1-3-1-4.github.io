@@ -12,7 +12,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-<link rel="stylesheet" href="//fonts.loli.net/css?family=Courier New:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="//fonts.loli.net/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Courier New:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
@@ -24,7 +24,7 @@
   <meta name="description" content="数据类型总览--列表详情">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python--数据类型总览--列表详情">
-<meta property="og:url" content="http://example.com/2021/04/29/02-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%88%97%E8%A1%A8%E8%AF%A6%E7%BB%86/index.html">
+<meta property="og:url" content="http://example.com/2021/04/29/python/02-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%88%97%E8%A1%A8%E8%AF%A6%E7%BB%86/index.html">
 <meta property="og:site_name" content="寥寥几笔">
 <meta property="og:description" content="数据类型总览--列表详情">
 <meta property="og:locale" content="zh_CN">
@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.runoob.com/wp-content/uploads/2014/05/positive-indexes-1.png">
 
-<link rel="canonical" href="http://example.com/2021/04/29/02-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%88%97%E8%A1%A8%E8%AF%A6%E7%BB%86/">
+<link rel="canonical" href="http://example.com/2021/04/29/python/02-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%88%97%E8%A1%A8%E8%AF%A6%E7%BB%86/">
 
 
 <script id="page-configurations">
@@ -81,7 +81,7 @@
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="寥寥几笔" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -168,7 +168,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/29/02-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%88%97%E8%A1%A8%E8%AF%A6%E7%BB%86/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/29/python/02-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%88%97%E8%A1%A8%E8%AF%A6%E7%BB%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -225,36 +225,90 @@
       
         <h2 id="一、格式"><a href="#一、格式" class="headerlink" title="一、格式"></a>一、格式</h2><p><code>变量名 = [值1, 值2, 值3]</code></p>
 <p><img data-src="https://www.runoob.com/wp-content/uploads/2014/05/positive-indexes-1.png" alt="列表"></p>
-<h2 id="二、初始化"><a href="#二、初始化" class="headerlink" title="二、初始化"></a>二、初始化</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 初始化一个空列表</span></span><br><span class="line">listEx = []</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化一个都为整型的列表</span></span><br><span class="line">listEx = [<span class="number">1</span>, <span class="number">2</span>, ,<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化连续的数字 [5, 6, 7, 8, 9]</span></span><br><span class="line">listEx = [n <span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>, <span class="number">10</span>)]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化n个相同值的列表 [1, 1, 1, 1, 1]</span></span><br><span class="line">listEx = [<span class="number">1</span> <span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>)] <span class="comment">#第一种</span></span><br><span class="line">listEx = [<span class="number">1</span>] * <span class="number">5</span> <span class="comment">#第二种</span></span><br></pre></td></tr></table></figure>
+<h2 id="二、初始化"><a href="#二、初始化" class="headerlink" title="二、初始化"></a>二、初始化</h2><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 初始化一个空列表</span>
+listEx <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 
+<span class="token comment" spellcheck="true"># 初始化一个都为整型的列表</span>
+listEx <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+
+<span class="token comment" spellcheck="true"># 初始化连续的数字 [5, 6, 7, 8, 9]</span>
+listEx <span class="token operator">=</span> <span class="token punctuation">[</span>n <span class="token keyword">for</span> n <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+<span class="token comment" spellcheck="true"># 初始化n个相同值的列表 [1, 1, 1, 1, 1]</span>
+listEx <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span> <span class="token keyword">for</span> n <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true">#第一种</span>
+listEx <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">5</span> <span class="token comment" spellcheck="true">#第二种</span>
+</code></pre>
 <h2 id="三、列表的操作"><a href="#三、列表的操作" class="headerlink" title="三、列表的操作"></a>三、列表的操作</h2><p><code>listEx = [1, 2, 3]</code></p>
-<h3 id="1、列表中增加值-修改值"><a href="#1、列表中增加值-修改值" class="headerlink" title="1、列表中增加值/修改值"></a>1、列表中增加值/修改值</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#插入指定值的后面,如果列表中有多个指定的值，则会插入在一个指定值的后面</span></span><br><span class="line">listEx.insert(<span class="number">2</span>, <span class="string">&#x27;bob&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#追加在列表的最后面 [1, 2, 3, &#x27;bob&#x27;]</span></span><br><span class="line">listEx.append(<span class="string">&#x27;bob&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#追加多个值 [1, 2, 3, &#x27;joe&#x27;, &#x27;hode&#x27;]</span></span><br><span class="line">listEx.extend([<span class="string">&#x27;joe&#x27;</span>, <span class="string">&#x27;hode&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#修改索引2的值</span></span><br><span class="line">listEx[<span class="number">2</span>] = <span class="string">&#x27;2333&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="1、列表中增加值-修改值"><a href="#1、列表中增加值-修改值" class="headerlink" title="1、列表中增加值/修改值"></a>1、列表中增加值/修改值</h3><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#插入指定值的后面,如果列表中有多个指定的值，则会插入在一个指定值的后面</span>
+listEx<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'bob'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#追加在列表的最后面 [1, 2, 3, 'bob']</span>
+listEx<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'bob'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#追加多个值 [1, 2, 3, 'joe', 'hode']</span>
+listEx<span class="token punctuation">.</span>extend<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'joe'</span><span class="token punctuation">,</span> <span class="token string">'hode'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#修改索引2的值</span>
+listEx<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'2333'</span>
+</code></pre>
 <span id="more"></span>
 <blockquote>
 <p>一些意外的写法</p>
 <p><code>listEx.append([&#39;bob&#39;, &#39;joe&#39;])</code>得到的是<code>[1, 2, 3, [&#39;bob&#39;, &#39;joe&#39;]]</code></p>
 <p><code>listEx.extend(&#39;bob&#39;)</code>得到的是<code>[1, 2, 3, &#39;b&#39;, &#39;o&#39;, &#39;b&#39;]</code></p>
 </blockquote>
-<h3 id="2、列表中删除值"><a href="#2、列表中删除值" class="headerlink" title="2、列表中删除值"></a>2、列表中删除值</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#删除指定的值</span></span><br><span class="line">listEx.remove(<span class="number">2</span>) <span class="comment">#删除的列表中第一个值为2的</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除从1到2位置的值</span></span><br><span class="line"><span class="keyword">del</span> listEx[<span class="number">1</span>:<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="2、列表中删除值"><a href="#2、列表中删除值" class="headerlink" title="2、列表中删除值"></a>2、列表中删除值</h3><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#删除指定的值</span>
+listEx<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#删除的列表中第一个值为2的</span>
 
+<span class="token comment" spellcheck="true">#删除从1到2位置的值</span>
+<span class="token keyword">del</span> listEx<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span>
+</code></pre>
 <h3 id="3、列表截取与拼接"><a href="#3、列表截取与拼接" class="headerlink" title="3、列表截取与拼接"></a>3、列表截取与拼接</h3><p>截取值的写法<code>列表[索引1:索引3]</code>,  会截取索引1(包括1)到索引3(不包括)之间的值</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">listEx = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>, <span class="number">60</span>, <span class="number">70</span>]</span><br><span class="line"><span class="built_in">print</span>(listEx[<span class="number">1</span>:<span class="number">5</span>])  <span class="comment"># 正常索引值截取</span></span><br><span class="line"><span class="comment"># [20, 30, 40, 50]</span></span><br><span class="line"><span class="built_in">print</span>(listEx[<span class="number">1</span>:-<span class="number">1</span>]) <span class="comment"># 负数索引值截取</span></span><br><span class="line"><span class="comment"># [20, 30, 40, 50, 60]</span></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-python"><code class="language-python">listEx <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">60</span><span class="token punctuation">,</span> <span class="token number">70</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>listEx<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 正常索引值截取</span>
+<span class="token comment" spellcheck="true"># [20, 30, 40, 50]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>listEx<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 负数索引值截取</span>
+<span class="token comment" spellcheck="true"># [20, 30, 40, 50, 60]</span>
+</code></pre>
 <p><strong>列表截取可以传入第三个值</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">listEx = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"><span class="built_in">print</span>(listEx[<span class="number">1</span>:<span class="number">6</span>:<span class="number">3</span>])</span><br><span class="line"><span class="comment"># [2, 5]</span></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-python"><code class="language-python">listEx <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>listEx<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">6</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># [2, 5]</span>
+</code></pre>
 <blockquote>
 <p>解释：截取索引1到索引6的值为<code>2, 3, 4, 5, 6</code>，第三个参数是3，就是每间隔3个取一个就是<code>2, 5</code></p>
 </blockquote>
 <p>列表的拼接操作</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listEx = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">listEx += [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line"><span class="built_in">print</span>(listEx)</span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6]</span></span><br></pre></td></tr></table></figure>
+<pre class=" language-python"><code class="language-python">listEx <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+listEx <span class="token operator">+=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>listEx<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># [1, 2, 3, 4, 5, 6]</span>
+</code></pre>
+<h3 id="4、列表的排序"><a href="#4、列表的排序" class="headerlink" title="4、列表的排序"></a>4、列表的排序</h3><h4 id="1-sorted-临时排序"><a href="#1-sorted-临时排序" class="headerlink" title="1. sorted() 临时排序"></a>1. sorted() 临时排序</h4><pre class=" language-python"><code class="language-python">num_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>sorted<span class="token punctuation">(</span>num_list<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#输出 [1, 2, 3, 4, 5, 6, 6, 9]</span>
+</code></pre>
+<h4 id="2-永久性排序"><a href="#2-永久性排序" class="headerlink" title="2.永久性排序"></a>2.永久性排序</h4><pre class=" language-python"><code class="language-python">num_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+num_list<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>num_list<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#输出 [1, 2, 3, 4, 5, 6, 6, 9]</span>
+num_list<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>reverse<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>num_list<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#输出 [9, 6, 6, 5, 4, 3, 2, 1]</span>
 
-<h3 id="4、列表的排序"><a href="#4、列表的排序" class="headerlink" title="4、列表的排序"></a>4、列表的排序</h3><h4 id="1-sorted-临时排序"><a href="#1-sorted-临时排序" class="headerlink" title="1. sorted() 临时排序"></a>1. sorted() 临时排序</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">num_list = [<span class="number">6</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">9</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sorted</span>(num_list))</span><br><span class="line"><span class="comment">#输出 [1, 2, 3, 4, 5, 6, 6, 9]</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="2-永久性排序"><a href="#2-永久性排序" class="headerlink" title="2.永久性排序"></a>2.永久性排序</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">num_list = [<span class="number">6</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">9</span>]</span><br><span class="line">num_list.sort()</span><br><span class="line"><span class="built_in">print</span>(num_list)</span><br><span class="line"><span class="comment">#输出 [1, 2, 3, 4, 5, 6, 6, 9]</span></span><br><span class="line">num_list.sort(reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(num_list)</span><br><span class="line"><span class="comment">#输出 [9, 6, 6, 5, 4, 3, 2, 1]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 二维列表排序</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sortSecond</span>(<span class="params">item</span>):</span></span><br><span class="line">    <span class="keyword">return</span> item[<span class="number">1</span>]</span><br><span class="line">num_list = [[<span class="number">1</span>,<span class="number">2</span>], [<span class="number">3</span>,<span class="number">4</span>], [<span class="number">2</span>,<span class="number">3</span>], [<span class="number">5</span>,<span class="number">9</span>]]</span><br><span class="line">num_list.sort(key=sortSecond)</span><br><span class="line"><span class="built_in">print</span>(num_list)</span><br><span class="line"><span class="comment"># [[1, 2], [2, 3], [3, 4], [5, 9]]</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="3-永久性翻转列表顺序"><a href="#3-永久性翻转列表顺序" class="headerlink" title="3.永久性翻转列表顺序"></a>3.永久性翻转列表顺序</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">num_list = [<span class="number">6</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">9</span>]</span><br><span class="line">num_list.reverse()</span><br><span class="line"><span class="built_in">print</span>(num_list)</span><br><span class="line"><span class="comment">#输出 [9, 6, 4, 2, 1, 5, 3, 6]</span></span><br></pre></td></tr></table></figure>
-
+<span class="token comment" spellcheck="true"># 二维列表排序</span>
+<span class="token keyword">def</span> <span class="token function">sortSecond</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> item<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+num_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+num_list<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>key<span class="token operator">=</span>sortSecond<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>num_list<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># [[1, 2], [2, 3], [3, 4], [5, 9]]</span>
+</code></pre>
+<h4 id="3-永久性翻转列表顺序"><a href="#3-永久性翻转列表顺序" class="headerlink" title="3.永久性翻转列表顺序"></a>3.永久性翻转列表顺序</h4><pre class=" language-python"><code class="language-python">num_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+num_list<span class="token punctuation">.</span>reverse<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>num_list<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#输出 [9, 6, 4, 2, 1, 5, 3, 6]</span>
+</code></pre>
 <h3 id="5、列表脚本操作符"><a href="#5、列表脚本操作符" class="headerlink" title="5、列表脚本操作符"></a>5、列表脚本操作符</h3><p>列表对 + 和 * 的操作符与字符串相似。+ 号用于组合列表，* 号用于重复列表。</p>
 <table>
 <thead>
@@ -366,10 +420,33 @@
 <td>复制列表</td>
 </tr>
 </tbody></table>
-<h2 id="五、列表注意"><a href="#五、列表注意" class="headerlink" title="五、列表注意"></a>五、列表注意</h2><h4 id="1、列表赋值"><a href="#1、列表赋值" class="headerlink" title="1、列表赋值"></a>1、列表赋值</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">foods = [<span class="string">&#x27;pizza&#x27;</span>, <span class="string">&#x27;falafel&#x27;</span>]</span><br><span class="line">my_foods = foods</span><br><span class="line">foods.append(<span class="string">&#x27;ice cream&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(my_foods)</span><br><span class="line"><span class="comment">#输出 [&#x27;pizza&#x27;, &#x27;falafel&#x27;, &#x27;ice cream&#x27;]</span></span><br><span class="line"></span><br><span class="line">foods = [<span class="string">&#x27;pizza&#x27;</span>, <span class="string">&#x27;falafel&#x27;</span>]</span><br><span class="line">my_foods = foods[:]</span><br><span class="line">foods.append(<span class="string">&#x27;ice cream&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(my_foods)</span><br><span class="line"><span class="comment">#输出 [&#x27;pizza&#x27;, &#x27;falafel&#x27;]</span></span><br></pre></td></tr></table></figure>
+<h2 id="五、列表注意"><a href="#五、列表注意" class="headerlink" title="五、列表注意"></a>五、列表注意</h2><h4 id="1、列表赋值"><a href="#1、列表赋值" class="headerlink" title="1、列表赋值"></a>1、列表赋值</h4><pre class=" language-python"><code class="language-python">foods <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'pizza'</span><span class="token punctuation">,</span> <span class="token string">'falafel'</span><span class="token punctuation">]</span>
+my_foods <span class="token operator">=</span> foods
+foods<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'ice cream'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_foods<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#输出 ['pizza', 'falafel', 'ice cream']</span>
 
-<h4 id="2、列表在作为函数参数入参时注意的"><a href="#2、列表在作为函数参数入参时注意的" class="headerlink" title="2、列表在作为函数参数入参时注意的"></a>2、列表在作为函数参数入参时注意的</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span>(<span class="params">param_list</span>):</span></span><br><span class="line">  param_list.append(<span class="number">1</span>)</span><br><span class="line">  param_list.append(<span class="number">2</span>)</span><br><span class="line"><span class="comment"># 1、对列表操作会改变之前列表</span></span><br><span class="line">param_1 = []</span><br><span class="line">test(param_1)</span><br><span class="line"><span class="built_in">print</span>(param_1)</span><br><span class="line"><span class="comment">#输出 [1,2]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2、对列表操作不会改变之前的列表</span></span><br><span class="line">param_2 = []</span><br><span class="line">test(param_2[:])</span><br><span class="line"><span class="built_in">print</span>(param_2)</span><br><span class="line"><span class="comment">#输出 []</span></span><br></pre></td></tr></table></figure>
+foods <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'pizza'</span><span class="token punctuation">,</span> <span class="token string">'falafel'</span><span class="token punctuation">]</span>
+my_foods <span class="token operator">=</span> foods<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+foods<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'ice cream'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_foods<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#输出 ['pizza', 'falafel']</span>
+</code></pre>
+<h4 id="2、列表在作为函数参数入参时注意的"><a href="#2、列表在作为函数参数入参时注意的" class="headerlink" title="2、列表在作为函数参数入参时注意的"></a>2、列表在作为函数参数入参时注意的</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">test</span><span class="token punctuation">(</span>param_list<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  param_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+  param_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 1、对列表操作会改变之前列表</span>
+param_1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+test<span class="token punctuation">(</span>param_1<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>param_1<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#输出 [1,2]</span>
 
+<span class="token comment" spellcheck="true"># 2、对列表操作不会改变之前的列表</span>
+param_2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+test<span class="token punctuation">(</span>param_2<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>param_2<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#输出 []</span>
+</code></pre>
 
     </div>
 
@@ -389,11 +466,11 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/04/29/03-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%AD%97%E5%85%B8%E8%AF%A6%E7%BB%86/" rel="prev" title="Python--数据类型总览--字典详情">
+    <a href="/2021/04/29/python/03-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%AD%97%E5%85%B8%E8%AF%A6%E7%BB%86/" rel="prev" title="Python--数据类型总览--字典详情">
       <i class="fa fa-chevron-left"></i> Python--数据类型总览--字典详情
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/04/29/01-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%80%BB%E8%A7%88/" rel="next" title="Python--数据类型总览">
+    <a href="/2021/04/29/python/01-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%80%BB%E8%A7%88/" rel="next" title="Python--数据类型总览">
       Python--数据类型总览 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
