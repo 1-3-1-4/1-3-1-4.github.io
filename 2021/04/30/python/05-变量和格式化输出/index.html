@@ -21,20 +21,22 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="数据类型总览--字典详情">
+  <meta name="description" content="Python变量赋值、格式化输出">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python--03-数据类型总览--字典详情">
-<meta property="og:url" content="http://example.com/2021/04/29/python/03-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%AD%97%E5%85%B8%E8%AF%A6%E7%BB%86/index.html">
+<meta property="og:title" content="Python--05-变量和格式化输出">
+<meta property="og:url" content="http://example.com/2021/04/30/python/05-%E5%8F%98%E9%87%8F%E5%92%8C%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA/index.html">
 <meta property="og:site_name" content="寥寥几笔">
-<meta property="og:description" content="数据类型总览--字典详情">
+<meta property="og:description" content="Python变量赋值、格式化输出">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-29T04:51:22.000Z">
-<meta property="article:modified_time" content="2021-04-30T07:36:49.385Z">
+<meta property="article:published_time" content="2021-04-30T06:12:50.000Z">
+<meta property="article:modified_time" content="2021-04-30T07:34:46.783Z">
 <meta property="article:author" content="YiZheng-Wei">
 <meta property="article:tag" content="Python">
+<meta property="article:tag" content="Python学习">
+<meta property="article:tag" content="变量和输出">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/04/29/python/03-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%AD%97%E5%85%B8%E8%AF%A6%E7%BB%86/">
+<link rel="canonical" href="http://example.com/2021/04/30/python/05-%E5%8F%98%E9%87%8F%E5%92%8C%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA/">
 
 
 <script id="page-configurations">
@@ -47,7 +49,7 @@
   };
 </script>
 
-  <title>Python--03-数据类型总览--字典详情 | 寥寥几笔</title>
+  <title>Python--05-变量和格式化输出 | 寥寥几笔</title>
   
 
 
@@ -166,7 +168,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/29/python/03-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%AD%97%E5%85%B8%E8%AF%A6%E7%BB%86/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/30/python/05-%E5%8F%98%E9%87%8F%E5%92%8C%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -179,7 +181,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Python--03-数据类型总览--字典详情
+          Python--05-变量和格式化输出
         </h1>
 
         <div class="post-meta">
@@ -188,16 +190,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-04-29 12:51:22" itemprop="dateCreated datePublished" datetime="2021-04-29T12:51:22+08:00">2021-04-29</time>
+              <time title="创建时间：2021-04-30 14:12:50 / 修改时间：15:34:46" itemprop="dateCreated datePublished" datetime="2021-04-30T14:12:50+08:00">2021-04-30</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-30 15:36:49" itemprop="dateModified" datetime="2021-04-30T15:36:49+08:00">2021-04-30</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -216,7 +212,7 @@
               <span class="post-meta-item-text">阅读次数：</span>
               <span id="busuanzi_value_page_pv"></span>
             </span>
-            <div class="post-description">数据类型总览--字典详情</div>
+            <div class="post-description">Python变量赋值、格式化输出</div>
 
         </div>
       </header>
@@ -227,65 +223,62 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="一、格式"><a href="#一、格式" class="headerlink" title="一、格式"></a>一、格式</h2><p><code>变量 = &#123;key1: value1, key2: value2, key3: value3&#125;</code></p>
-<p>键必须是唯一的，但值可以不必。</p>
-<p>一个简单的字典实例：</p>
-<pre class=" language-python"><code class="language-python">dictEx <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;'name': 'runoob', 'likes': 123, 'url': 'www.runoob.com'&amp;#125;</span>
+        <h2 id="变量赋值"><a href="#变量赋值" class="headerlink" title="变量赋值"></a>变量赋值</h2><h3 id="1、命名规范"><a href="#1、命名规范" class="headerlink" title="1、命名规范"></a>1、命名规范</h3><ul>
+<li>使用英文单词，看词识意</li>
+<li>使用驼峰命名法</li>
+<li>由数字、字母、下划线组成</li>
+<li>严格区分大小写</li>
+<li>不要使用Python中的关键字来命名</li>
+</ul>
+<h3 id="2、赋值"><a href="#2、赋值" class="headerlink" title="2、赋值"></a>2、赋值</h3><h4 id="简单的赋值"><a href="#简单的赋值" class="headerlink" title="简单的赋值"></a>简单的赋值</h4><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#格式 </span>
+<span class="token comment" spellcheck="true"># 变量名 = 变量值</span>
+<span class="token comment" spellcheck="true"># 变量1, 变量2 = 变量值1, 变量值2</span>
+<span class="token comment" spellcheck="true"># 变量1 = 变量2 = 变量值</span>
+firstEx <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>firstEx<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 1</span>
+firstEx<span class="token punctuation">,</span> secondEx <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>firstEx<span class="token punctuation">,</span> secondEx<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 1 2</span>
+</code></pre>
+<h4 id="多个变量赋值"><a href="#多个变量赋值" class="headerlink" title="多个变量赋值"></a>多个变量赋值</h4><pre class=" language-python"><code class="language-python">a <span class="token operator">=</span> b <span class="token operator">=</span> <span class="token number">99</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 99 99</span>
+
+a_str<span class="token punctuation">,</span> b_str <span class="token operator">=</span> <span class="token string">'abc'</span><span class="token punctuation">,</span> <span class="token string">'def'</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a_str<span class="token punctuation">,</span> b_str<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># abc def</span>
+
+a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'ab'</span>
+</code></pre>
+<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p><strong>python没有定义常量关键词</strong></p>
+<h2 id="格式化输出"><a href="#格式化输出" class="headerlink" title="格式化输出"></a>格式化输出</h2><h3 id="1、拼接符"><a href="#1、拼接符" class="headerlink" title="1、拼接符"></a>1、拼接符</h3><h4 id="1"><a href="#1" class="headerlink" title="1.   +"></a>1.   <code>+</code></h4><pre class=" language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"变量："</span> <span class="token operator">+</span> <span class="token string">"abc"</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 变量abc</span>
 </code></pre>
 <blockquote>
-<p>如果声明字典时有相同的键，则会只存在最后面的那个键值</p>
-<p><code>dictEx = &#123;&#39;python&#39;: &#39;one&#39;, &#39;php&#39;: &#39;two&#39;, &#39;python&#39;: &#39;three&#39;&#125;</code></p>
-<p>实际<code>dictEx</code>为<code>&#123;&#39;python&#39;: &#39;three&#39;, &#39;php&#39;: &#39;two&#39;&#125;</code></p>
+<p>拼接的必须为字符串类型</p>
 </blockquote>
-<span id="more"></span>
-<h2 id="二、字典操作"><a href="#二、字典操作" class="headerlink" title="二、字典操作"></a>二、字典操作</h2><h3 id="1、基本操作"><a href="#1、基本操作" class="headerlink" title="1、基本操作"></a>1、基本操作</h3><h4 id="1-增加-修改字典"><a href="#1-增加-修改字典" class="headerlink" title="1.增加/修改字典"></a>1.增加/修改字典</h4><pre class=" language-python"><code class="language-python">dictEx <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;'a':1, 'b':2&amp;#125;</span>
-
-<span class="token comment" spellcheck="true"># 增</span>
-dictEx<span class="token punctuation">[</span><span class="token string">'c'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">3</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>dictEx<span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">#输出 &amp;#123;'a': 1, 'b': 2, 'c': 3&amp;#125;</span>
-dictEx<span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;'t':1, 'd': "66"&amp;#125;)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>dictEx<span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">#输出 &amp;#123;'a': 1, 'b': 2, 'c': 3, 't': 1, 'd': '66'&amp;#125;</span>
+<h4 id="2"><a href="#2" class="headerlink" title="2.  ,"></a>2.  <code>,</code></h4><pre class=" language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"变量："</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 变量1</span>
 </code></pre>
-<h4 id="2-删除字典"><a href="#2-删除字典" class="headerlink" title="2.删除字典"></a>2.删除字典</h4><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 删除字典的键</span>
-<span class="token keyword">del</span> dictEx<span class="token punctuation">[</span><span class="token string">'b'</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>dictEx<span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">#输出 &amp;#123;'a': 1, 'c': 3, 't': 1, 'd': '66'&amp;#125;</span>
+<h3 id="2、格式化符号"><a href="#2、格式化符号" class="headerlink" title="2、格式化符号"></a>2、格式化符号</h3><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># %s 字符串</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"变量%s"</span> <span class="token operator">%</span> <span class="token string">"aaa"</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 变量aaa</span>
 
-<span class="token comment" spellcheck="true"># 清空字典</span>
-dictEx<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># %d 有符号的十进制整数</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"整数：%d"</span> <span class="token operator">%</span> <span class="token number">11111</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 整数：11111</span>
 
-<span class="token comment" spellcheck="true"># 删除字典</span>
-<span class="token keyword">del</span> dcitEx
+<span class="token comment" spellcheck="true"># %f 浮点数</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"浮点数保留两位小数 %.2f"</span> <span class="token operator">%</span> <span class="token number">1.345632</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#会四舍五入</span>
+<span class="token comment" spellcheck="true"># 浮点数保留两位小数 1.35</span>
 </code></pre>
-<h4 id="3-获取字典的key"><a href="#3-获取字典的key" class="headerlink" title="3.获取字典的key"></a>3.获取字典的key</h4><pre class=" language-python"><code class="language-python">dict <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;'jen': 'python', 'sarch': 'c'&amp;#125;</span>
-<span class="token keyword">for</span> name <span class="token keyword">in</span> dict<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>name<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">#输出</span>
-<span class="token comment" spellcheck="true"># jen</span>
-<span class="token comment" spellcheck="true"># sarch</span>
-</code></pre>
-<h4 id="4-字典的特性"><a href="#4-字典的特性" class="headerlink" title="4.字典的特性"></a>4.字典的特性</h4><p>1）键必须不可变，可以用数字，字符串和元组充当</p>
-<h2 id="三、注意点"><a href="#三、注意点" class="headerlink" title="三、注意点"></a>三、注意点</h2><h3 id="1、Python-字典通过检查键值是否相等和比较哈希值来确定两个键是否相同。"><a href="#1、Python-字典通过检查键值是否相等和比较哈希值来确定两个键是否相同。" class="headerlink" title="1、Python 字典通过检查键值是否相等和比较哈希值来确定两个键是否相同。"></a>1、Python 字典通过检查键值是否相等和比较哈希值来确定两个键是否相同。</h3><pre class=" language-python"><code class="language-python">some_dict <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;&amp;#125;</span>
-some_dict<span class="token punctuation">[</span><span class="token number">5.5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Ruby"</span>
-some_dict<span class="token punctuation">[</span><span class="token number">5.0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"JavaScript"</span>
-some_dict<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Python"</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>some_dict<span class="token punctuation">[</span><span class="token number">5.5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">#输出 Ruby</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>some_dict<span class="token punctuation">[</span><span class="token number">5.0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">#输出 Python</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>some_dict<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">#输出 Python</span>
+<h3 id="3、字面量格式化字符串-f-‘-表达式-’"><a href="#3、字面量格式化字符串-f-‘-表达式-’" class="headerlink" title="3、字面量格式化字符串 f(‘{表达式}’)"></a>3、字面量格式化字符串 f(‘{表达式}’)</h3><pre class=" language-python"><code class="language-python">strEx <span class="token operator">=</span> <span class="token string">'jack'</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">(</span><span class="token string">'hello &amp;#123;strEx&amp;#125;'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># hello jack</span>
 
-<span class="token keyword">print</span><span class="token punctuation">(</span>hash<span class="token punctuation">(</span><span class="token number">5.0</span><span class="token punctuation">)</span> <span class="token operator">==</span> hash<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">#输出 True</span>
-</code></pre>
-<h3 id="2、判断字典某个key是否存在"><a href="#2、判断字典某个key是否存在" class="headerlink" title="2、判断字典某个key是否存在"></a>2、判断字典某个key是否存在</h3><pre class=" language-python"><code class="language-python">dict_ex <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;'name': 'wei', 'age': 18&amp;#125;</span>
-<span class="token keyword">if</span> <span class="token string">'name'</span> <span class="token keyword">in</span> dict_ex<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-  <span class="token keyword">return</span> true
-<span class="token keyword">else</span><span class="token punctuation">:</span>
-  <span class="token keyword">return</span> false
+<span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">(</span><span class="token string">'&amp;#123;1+1&amp;#125;'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 2</span>
 </code></pre>
 
     </div>
@@ -298,6 +291,8 @@ some_dict<span class="token punctuation">[</span><span class="token number">5</s
           
           <div class="post-tags">
               <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+              <a href="/tags/Python%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fa fa-tag"></i> Python学习</a>
+              <a href="/tags/%E5%8F%98%E9%87%8F%E5%92%8C%E8%BE%93%E5%87%BA/" rel="tag"><i class="fa fa-tag"></i> 变量和输出</a>
           </div>
 
         
@@ -306,12 +301,12 @@ some_dict<span class="token punctuation">[</span><span class="token number">5</s
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/04/29/python/02-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%88%97%E8%A1%A8%E8%AF%A6%E7%BB%86/" rel="prev" title="Python--02-数据类型总览--列表详情">
-      <i class="fa fa-chevron-left"></i> Python--02-数据类型总览--列表详情
+    <a href="/2021/04/29/python/04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%AF%A6%E7%BB%86/" rel="prev" title="Python--04-数据类型总览--字符串详情">
+      <i class="fa fa-chevron-left"></i> Python--04-数据类型总览--字符串详情
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/04/29/python/04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%AF%A6%E7%BB%86/" rel="next" title="Python--04-数据类型总览--字符串详情">
-      Python--04-数据类型总览--字符串详情 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/04/30/python/06-%E8%BF%90%E7%AE%97%E7%AC%A6/" rel="next" title="Python--06-运算符">
+      Python--06-运算符 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -371,7 +366,7 @@ some_dict<span class="token punctuation">[</span><span class="token number">5</s
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">一、格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AD%97%E5%85%B8%E6%93%8D%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">二、字典操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">2.1.</span> <span class="nav-text">1、基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%A2%9E%E5%8A%A0-%E4%BF%AE%E6%94%B9%E5%AD%97%E5%85%B8"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.增加&#x2F;修改字典</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%88%A0%E9%99%A4%E5%AD%97%E5%85%B8"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.删除字典</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E8%8E%B7%E5%8F%96%E5%AD%97%E5%85%B8%E7%9A%84key"><span class="nav-number">2.1.3.</span> <span class="nav-text">3.获取字典的key</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E5%AD%97%E5%85%B8%E7%9A%84%E7%89%B9%E6%80%A7"><span class="nav-number">2.1.4.</span> <span class="nav-text">4.字典的特性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="nav-number">3.</span> <span class="nav-text">三、注意点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81Python-%E5%AD%97%E5%85%B8%E9%80%9A%E8%BF%87%E6%A3%80%E6%9F%A5%E9%94%AE%E5%80%BC%E6%98%AF%E5%90%A6%E7%9B%B8%E7%AD%89%E5%92%8C%E6%AF%94%E8%BE%83%E5%93%88%E5%B8%8C%E5%80%BC%E6%9D%A5%E7%A1%AE%E5%AE%9A%E4%B8%A4%E4%B8%AA%E9%94%AE%E6%98%AF%E5%90%A6%E7%9B%B8%E5%90%8C%E3%80%82"><span class="nav-number">3.1.</span> <span class="nav-text">1、Python 字典通过检查键值是否相等和比较哈希值来确定两个键是否相同。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E5%88%A4%E6%96%AD%E5%AD%97%E5%85%B8%E6%9F%90%E4%B8%AAkey%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8"><span class="nav-number">3.2.</span> <span class="nav-text">2、判断字典某个key是否存在</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E8%B5%8B%E5%80%BC"><span class="nav-number">1.</span> <span class="nav-text">变量赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83"><span class="nav-number">1.1.</span> <span class="nav-text">1、命名规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E8%B5%8B%E5%80%BC"><span class="nav-number">1.2.</span> <span class="nav-text">2、赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E8%B5%8B%E5%80%BC"><span class="nav-number">1.2.1.</span> <span class="nav-text">简单的赋值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E4%B8%AA%E5%8F%98%E9%87%8F%E8%B5%8B%E5%80%BC"><span class="nav-number">1.2.2.</span> <span class="nav-text">多个变量赋值</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E9%87%8F"><span class="nav-number">2.</span> <span class="nav-text">常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA"><span class="nav-number">3.</span> <span class="nav-text">格式化输出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E6%8B%BC%E6%8E%A5%E7%AC%A6"><span class="nav-number">3.1.</span> <span class="nav-text">1、拼接符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1"><span class="nav-number">3.1.1.</span> <span class="nav-text">1.   +</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2"><span class="nav-number">3.1.2.</span> <span class="nav-text">2.  ,</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%AC%A6%E5%8F%B7"><span class="nav-number">3.2.</span> <span class="nav-text">2、格式化符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E5%AD%97%E9%9D%A2%E9%87%8F%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2-f-%E2%80%98-%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E2%80%99"><span class="nav-number">3.3.</span> <span class="nav-text">3、字面量格式化字符串 f(‘{表达式}’)</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
